@@ -21,12 +21,14 @@ KSCrash:https://github.com/kstenerud/KSCrash
 Or write it yourself.
 
 ### How do I get the device support file?
+Refer to https://github.com/Zuikyo/iOS-System-Symbols.
+
 1. When you need to symbolicate a crash report, check the `Code Type` and `OS Version` section. Such as:`Code Type:       ARM-64`
 `OS Version:      iOS 10.2 (14C82)`. That means you need `arm64`version symbols of `10.2 (14C82)`system.
 
 2. Find the package in my sharing folder and extract it to `~/Library/Developer/Xcode/iOS DeviceSupport`. (Check the file's name and path, it should be`~/Library/Developer/Xcode/iOS DeviceSupport/10.2 (14C82)/Symbols`).
 
-3. Use Xcode's`symbolicatecrash` tool to symbolicate your crash report. This tool will search system symbols in the`iOS DeviceSupport`path automatically. Read this to learn how to use`symbolicatecrash`: [Symbolicating an iOS Crash Report](https://www.apteligent.com/developer-resources/symbolicating-an-ios-crash-report/?partner_code=GDC_so_symbolicateios).
+3. Use Xcode's`symbolicatecrash` tool to symbolicate your crash report. This tool will search system symbols in the`iOS DeviceSupport`path automatically. 
 
 How to extract symbols from firmware:
 
